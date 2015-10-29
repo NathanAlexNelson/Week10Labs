@@ -6,7 +6,7 @@ public class RandomNumber
 		int randomNumber = 0 + (int) (Math.random() * high);
 		return randomNumber;
 	}
-	public int GetANumber()
+	public int GetANumberOrig()
 	{
 		
 		int randomNumber = 0 + (int) (Math.random() * 10);
@@ -15,16 +15,38 @@ public class RandomNumber
 	public int GetANumber(int lo, int hi)
 	{
 		
-		int randomNumber = lo + (int) (Math.random() * hi);
+		int randomNumber = lo + (int) (Math.random() * (hi - lo));
 		return randomNumber;		
 	}
-	/*public int SetLowNumber(int low)
+	
+	private int LowNum;
+	private int HighNum;
+	
+	public void SetLowNumber(int Low)
 	{
-		
+		LowNum = Low;
 		
 	}
-	public int SetLowNumber(int high)
+	public void SetHighNumber(int High)
 	{
+		HighNum = High;
 		
-	}*/
+	}
+	
+	public int GetLowNumber()
+	{
+		return LowNum;
+	}
+	
+	public int GetHighNumber()
+	{
+		return HighNum;
+	}
+	
+	public int GetANumber()
+	{
+	
+		int randomNumber = GetLowNumber() + (int) (Math.random() * GetHighNumber());
+		return randomNumber;
+	}
 }
