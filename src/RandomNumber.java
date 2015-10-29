@@ -15,7 +15,7 @@ public class RandomNumber
 	public int GetANumber(int lo, int hi)
 	{
 		
-		int randomNumber = lo + (int) (Math.random() * (hi - lo));
+		int randomNumber = lo + (int) (Math.random() * hi);
 		return randomNumber;		
 	}
 	/*public int SetLowNumber(int low)
